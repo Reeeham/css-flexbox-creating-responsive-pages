@@ -1,0 +1,217 @@
+/*Main Area*/
+body {
+    margin-top: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e6e4d9;
+    background-image: url('../images/pattern.png');
+}
+
+#mainheader {
+    background-color: #a593c2;
+}
+
+/*Top Menu*/
+
+nav {
+    height: 60px;
+    width: 80%;
+    margin: 0 auto 20px;
+}
+.pieGallery>img{
+    width: 40%;
+    height: auto;
+}
+nav>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+nav>ul>li:nth-child(1){
+    flex-grow: 2;
+}
+
+nav>ul>li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*Side Menu*/
+
+.mainContent ul{
+    padding-inline-start: 0;
+    margin-right: 0;
+    padding: .7rem;
+}
+
+.mainContent ul>a>li{
+    background-color: #cf4522;
+    color: #fff;
+    list-style: none;
+    padding: 14px 25px;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+.mainContent ul>a>li:hover{
+    background-color: #B43110;
+}
+
+.mainContent ul>a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.mainContent{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*align-content: space-between; centered all the contents the entire content in the middle*/
+    /* flex-wrap: wrap-reverse; */
+    /* flex-direction: row-reverse; */
+}
+
+.pieGallery{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 60%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.pieCard{
+    display: flex;
+    flex-direction: column;
+    margin: .4rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+    padding: .4rem;
+    flex-grow: 2;
+}
+.pieCard > h, .pieCard > p{
+    margin: .2rem 0;
+}
+.pieCard > img{
+    align-self: center;
+}
+.cardRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardRow > h, .cardRow > p{
+    margin: .2rem 0;
+}
+
+#promos {
+    align-self: center;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    border-radius: 20px;
+
+}
+#promos > h3{
+    margin: 5px 0;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Main Content*/
+
+
+
+.pageTitle{
+    font-size:35px;
+    color:#a593c2;
+}
+.box{
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    margin: 5px 10px;
+}
+.box:nth-child(1){
+    order: 15;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+    /* background-color: blue; */
+}
+.pieRow{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: space-between; /*aligning items to main-axis*/
+    flex-wrap: wrap;
+    align-items: center;/*aligning items to cross-axis: center, flex-end, flex-start*/
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    padding-right: .5rem;
+}
+.pieRow > div{
+    flex-grow: 2;
+    padding-left: .5rem;
+}
+.pieRow > small {
+    flex-shrink: 3;
+}
+.leftMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Footer*/
+footer {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   /* flex-direction: column-reverse; */
+}
+footer > p, footer > address{
+    margin: .5rem 0;
+}
+
+@media screen and (max-width:600px){
+    .leftMenu{
+        order:1;/*adjust order at different screen sizes*/
+    }
+    .main,.pieGallery{
+        flex-basis: 90% !important;
+    }
+
+}
+
+/*
+flex order 
+flex-direction : row-reverse or column-reverse could be useful in some situtations
+flex grow when growing
+flex shrink when shrinking
+flex-basis fixed
+align-self **/
